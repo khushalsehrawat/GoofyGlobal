@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+ #nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    /* 
+    box-shadow: 1px 1px 7px 2px rgba(0,0,0,0.72);
+-webkit-box-shadow: 1px 1px 7px 2px rgba(0,0,0,0.72);
+-moz-box-shadow: 1px 1px 7px 2px rgba(0,0,0,0.72); */
+} 
+  body{
+    background-color: #87cfeb22;
+  }
+
+#logo {
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+#checking {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow:inset 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative; /* add this */
+    z-index: 1;
+    width: 50%;
+}
+
+.speed-display {
+    margin-bottom: 20px;
+}
+
+#startTest {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button{
+    position: relative;
+    overflow: hidden;
+}
+.button:hover::before{
+    animation: shine 1.5s ease-out infinite;
+}
+.button::before {
+    content: "";
+    position: absolute;
+    width: 100%; /* match the width of the button */
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255,255,255,0) 30%,
+      rgba(255,255,255,0),
+      rgba(255,255,255,0) 70%
+    );
+    top: 0;
+    left: -100%; /* start outside of the button */
+    opacity: 0.6;
+  }
+  
+  @keyframes shine {
+    100% {
+      left: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #checking {
+      margin-top: 20% !important;
+  }
+  }
