@@ -29,7 +29,7 @@
     box-shadow:inset 0 0 15px rgba(0, 0, 0, 0.1);
     position: relative; /* add this */
     z-index: 1;
-    width: 50%;
+    width: 30%;
 }
 
 .speed-display {
@@ -76,5 +76,6 @@
   @media only screen and (max-width: 600px) {
     #checking {
       margin-top: 20% !important;
+      width: 60%;
   }
   }
